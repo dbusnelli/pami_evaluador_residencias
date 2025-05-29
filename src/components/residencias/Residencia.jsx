@@ -1,4 +1,4 @@
-import PencilSquareIcon from "../../../public/assets/pencli-square"
+import PencilSquareIcon from "../../../public/assets/pencil-square"
 
 function Residencia(props) {
     const {residencia, handleEditar} = props
