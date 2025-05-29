@@ -2,13 +2,12 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import AppRouter from './router/AppRouter'
-import NavBar from './components/NavBar'
+import { BrowserRouter } from 'react-router'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <NavBar />
-    <div className='container mt-2'>
+    <BrowserRouter>
       <AppRouter />
-    </div>
+    </BrowserRouter>
   </StrictMode>,
 )
