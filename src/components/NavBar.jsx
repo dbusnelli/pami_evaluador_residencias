@@ -8,7 +8,7 @@ function NavBar() {
   return (
     <Navbar expand="lg" className="text-secondary" variant="dark" style={{backgroundColor: "#050a3d"}}>
       <Container>
-        <Navbar.Brand href={INDEX_PAGE}><img src="../../public/assets/logo.png" width={"185rem"}/></Navbar.Brand>
+        <Navbar.Brand href={INDEX_PAGE}><img src="/assets/logo.png" width={"185rem"}/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
