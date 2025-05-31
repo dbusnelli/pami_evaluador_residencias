@@ -195,7 +195,7 @@ function CrearResidencia({edicion}) {
                 <div className=" col-lg-6 col-12" style={{height: "3rem", display: "flex", justifyContent: "flex-start"}}>
                     <span className="input-group-text style col-8" style={custom_input_group_text_style}>Total de habitaciones:</span>
                     <input type="number"
-                        value={editarTotalHabitaciones ? residencia.total_plazas : calcularTotalHabitaciones()}
+                        value={editarTotalHabitaciones ? residencia.total_habitaciones : calcularTotalHabitaciones()}
                         onChange={e => setResidencia({...residencia, total_habitaciones: Number(e.target.value)})}
                         style={{...custom_input_group_text_style, borderTopLeftRadius: 0, borderBottomLeftRadius: 0}} className="form-control col"
                         id="totalPlazas"
