@@ -1,6 +1,8 @@
-import { TABLA_RESIDENCIAS } from "../utils/Const"
+import { TABLA_MODALIDADES_PRESTACIONALES, TABLA_RESIDENCIAS } from "../utils/Const"
 import { supabase } from "./supabase-client"
 
+
+//RESIDENCIAS
 export const addResidencia = async(residencia, cb) => {
     let {error} = await supabase.from(TABLA_RESIDENCIAS).insert(residencia)
 
@@ -27,3 +29,10 @@ export const getResidenciaById = async(id, setResidencias, cb) => {
     cb(error?.message)
 }
 
+//MODALIDADES PRESTACINALES
+export const getModalidadesPrestacinoales = async(setModalidades, cb) => {
+    let {data, error} = await supabase.from(TABLA_MODALIDADES_PRESTACIONALES).select()
+
+    setModalidades(data)
+    cb(error?.message)
+}
