@@ -15,6 +15,12 @@ export const updateResidenciaById = async(id, residencia, cb) => {
     cb(error?.message)
 }
 
+export const eliminarResidenciaById = async(id, cb) => {
+    let {error} = await supabase.from(TABLA_RESIDENCIAS).delete().eq('id', id)
+
+    cb(error?.message)
+}
+
 export const getAllResidencias = async(setResidencias, cb) => {
     let {data, error} = await supabase.from(TABLA_RESIDENCIAS).select()
 
