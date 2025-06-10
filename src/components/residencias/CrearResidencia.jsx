@@ -27,7 +27,8 @@ const initialResidencia = {
     habitaciones_triples_sin_banio: 0,
     banios_uso_compartido: 0,
     cuit: "",
-    razon_social: ""
+    razon_social: "",
+    telefono: ""
 }
 
 const custom_input_group_text_style = {borderTopRightRadius: 0, borderBottomRightRadius: 0}
@@ -120,16 +121,6 @@ function CrearResidencia({edicion}) {
             </div>
             <div className="row mb-2">
                 <div className="col-lg-6 col-12">
-                    <label htmlFor="localidadResidenicia" className="form-label">CUIT</label>
-                    <input type="text" value={residencia.cuit} onChange={e => setResidencia({...residencia, cuit: e.target.value})} className="form-control" id="localidadResidenicia" />
-                </div>
-                <div className="col-lg-6 col-12">
-                    <label htmlFor="emailResidenicia" className="form-label">E-Mail</label>
-                    <input type="email" value={residencia.email} onChange={e => setResidencia({...residencia, email: e.target.value})} className="form-control" id="emailResidenicia" />
-                </div>
-            </div>
-            <div className="row mb-2">
-                <div className="col-lg-6 col-12">
                     <label htmlFor="provinciaResidencia" className="form-label">Provincia</label>
                     <input type="text" value={residencia.provincia} onChange={e => setResidencia({...residencia, provincia: e.target.value})} className="form-control" id="provinciaResidencia" />
                 </div>
@@ -138,8 +129,22 @@ function CrearResidencia({edicion}) {
                     <input type="text" value={residencia.codigo_postal} onChange={e => setResidencia({...residencia, codigo_postal: e.target.value})} className="form-control" id="codigoPostalResidenicia" />
                 </div>
                 <div className="col-lg-3 col-12">
-                    <label htmlFor="codigo-prestador" className="form-label">Codigo del prestador</label>
+                    <label htmlFor="localidadResidenicia" className="form-label">CUIT</label>
+                    <input type="text" value={residencia.cuit} onChange={e => setResidencia({...residencia, cuit: e.target.value})} className="form-control" id="localidadResidenicia" />
+                </div>
+            </div>
+            <div className="row mb-2">
+                <div className="col-lg-3 col-12">
+                    <label htmlFor="codigo-prestador" className="form-label">Código del prestador</label>
                     <input type="text" value={residencia.codigo_prestador} onChange={e => setResidencia({...residencia, codigo_prestador: e.target.value})} className="form-control" id="codigo-prestador" />
+                </div>
+                <div className="col-lg-3 col-12">
+                    <label htmlFor="codigoPostalResidenicia" className="form-label">Teléfono</label>
+                    <input type="text" value={residencia.telefono} onChange={e => setResidencia({...residencia, telefono: e.target.value})} className="form-control" id="codigoPostalResidenicia" />
+                </div>
+                <div className="col-lg-6 col-12">
+                    <label htmlFor="emailResidenicia" className="form-label">E-Mail</label>
+                    <input type="email" value={residencia.email} onChange={e => setResidencia({...residencia, email: e.target.value})} className="form-control" id="emailResidenicia" />
                 </div>
             </div>
             <div className="row mb-2">
