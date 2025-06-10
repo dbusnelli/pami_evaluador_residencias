@@ -25,7 +25,9 @@ const initialResidencia = {
     habitaciones_triples_banio: 0,
     habitaciones_individuales_sin_banio: 0,
     habitaciones_triples_sin_banio: 0,
-    banios_uso_compartido: 0
+    banios_uso_compartido: 0,
+    cuit: "",
+    razon_social: ""
 }
 
 const custom_input_group_text_style = {borderTopRightRadius: 0, borderBottomRightRadius: 0}
@@ -118,18 +120,8 @@ function CrearResidencia({edicion}) {
             </div>
             <div className="row mb-2">
                 <div className="col-lg-6 col-12">
-                    <p>UGL</p>
-                    <select className="form-select"
-                        value={residencia.ugl}
-                        onChange={e => setResidencia({...residencia, ugl: e.target.value})}
-                    >
-                        <option value={1}>I</option>
-                        <option value={2}>II</option>
-                        <option value={3}>III</option>
-                        <option value={4}>IV</option>
-                        <option value={5}>V</option>
-                        <option value={6}>VI</option>
-                    </select>
+                    <label htmlFor="localidadResidenicia" className="form-label">CUIT</label>
+                    <input type="text" value={residencia.cuit} onChange={e => setResidencia({...residencia, cuit: e.target.value})} className="form-control" id="localidadResidenicia" />
                 </div>
                 <div className="col-lg-6 col-12">
                     <label htmlFor="emailResidenicia" className="form-label">E-Mail</label>
@@ -151,7 +143,7 @@ function CrearResidencia({edicion}) {
                 </div>
             </div>
             <div className="row mb-2">
-                <div className="mb-2 col-lg-6 col-12">
+                <div className="col-lg-3 col-12">
                     <p>Modulo de cuidados continuos - MCC</p>
                     <div className="form-check form-check-inline">
                         <input className="form-check-input" type="radio" checked={residencia.mcc === 1} onChange={() => setResidencia({...residencia, mcc: 1})} />
@@ -165,6 +157,20 @@ function CrearResidencia({edicion}) {
                         No
                     </label>
                     </div>
+                </div>
+                <div className="col-lg-3 col-12">
+                    <p>UGL</p>
+                    <select className="form-select"
+                        value={residencia.ugl}
+                        onChange={e => setResidencia({...residencia, ugl: e.target.value})}
+                    >
+                        <option value={1}>I</option>
+                        <option value={2}>II</option>
+                        <option value={3}>III</option>
+                        <option value={4}>IV</option>
+                        <option value={5}>V</option>
+                        <option value={6}>VI</option>
+                    </select>
                 </div>
                 <div className="row mb-2 col-lg-6 col-12">
                     <p>Modalidad prestacional</p>
