@@ -3,7 +3,7 @@ import { LOCALIDAD_INICIAL, UGL_INICIAL } from "../../utils/Const";
 import CustomModal from "../commons/CustomModal";
 import { addResidencia, getModalidadesPrestacinoales, getResidenciaById, updateResidenciaById } from "../../supabase/dao";
 import { useParams } from "react-router";
-import PencilSquareIcon from "../../../assets/pencil-square";
+import PencilSquareIcon from "../../../public/assets/pencil-square";
 
 
 const initialResidencia = {
