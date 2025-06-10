@@ -3,7 +3,7 @@ import { LOCALIDAD_INICIAL, UGL_INICIAL } from "../../utils/Const";
 import CustomModal from "../commons/CustomModal";
 import { addResidencia, getModalidadesPrestacinoales, getResidenciaById, updateResidenciaById } from "../../supabase/dao";
 import { useParams } from "react-router";
-import PencilSquareIcon from "../../../public/assets/pencil-square";
+import PencilSquareIcon from "../../../assets/pencil-square";
 
 
 const initialResidencia = {
@@ -182,13 +182,13 @@ function CrearResidencia({edicion}) {
                 </div>
                 <div className=" col-lg-6 col-12" style={{height: "3rem", display: "flex", justifyContent: "flex-start"}}>
                     <span className="input-group-text col-10" style={custom_input_group_text_style}>Plazas ocupadas con prestación PAMI:</span>
-                    <input type="number" value={residencia.total_plazas} onChange={e => setResidencia({...residencia, plazas_pami: Number(e.target.value)})} style={custom_input_number_style} className="form-control col" id="totalPlazas" />
+                    <input type="number" value={residencia.plazas_pami} onChange={e => setResidencia({...residencia, plazas_pami: Number(e.target.value)})} style={custom_input_number_style} className="form-control col" id="totalPlazas" />
                 </div>
             </div>
             <div className="row mb-4">
                 <div className=" col-lg-6 col-12" style={{height: "3rem", display: "flex", justifyContent: "flex-start"}}>
                     <span className="input-group-text col-10" style={custom_input_group_text_style}>Plazas ocupadas sin prestación PAMI:</span>
-                    <input type="number" value={residencia.total_plazas} onChange={e => setResidencia({...residencia, plazas_sin_pami: Number(e.target.value)})} style={custom_input_number_style} className="form-control col" id="totalPlazas" />
+                    <input type="number" value={residencia.plazas_sin_pami} onChange={e => setResidencia({...residencia, plazas_sin_pami: Number(e.target.value)})} style={custom_input_number_style} className="form-control col" id="totalPlazas" />
                 </div>
             </div>
             <div className="row mb-2">
