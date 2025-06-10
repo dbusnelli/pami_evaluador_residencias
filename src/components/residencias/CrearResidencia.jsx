@@ -102,8 +102,8 @@ function CrearResidencia({edicion}) {
                     <input type="text" value={residencia.nombre} onChange={e => setResidencia({...residencia, nombre: e.target.value})} className="form-control" id="nombreResidencia" />
                 </div>
                 <div className="col-lg-6 col-12">
-                    <label htmlFor="codigo-prestador" className="form-label">Codigo del prestador</label>
-                    <input type="text" value={residencia.codigo_prestador} onChange={e => setResidencia({...residencia, codigo_prestador: e.target.value})} className="form-control" id="codigo-prestador" />
+                    <label htmlFor="nombreResidencia" className="form-label">Razón Social</label>
+                    <input type="text" value={residencia.razon_social} onChange={e => setResidencia({...residencia, razon_social: e.target.value})} className="form-control" id="nombreResidencia" />
                 </div>
             </div>
             <div className="row mb-2">
@@ -141,9 +141,13 @@ function CrearResidencia({edicion}) {
                     <label htmlFor="provinciaResidencia" className="form-label">Provincia</label>
                     <input type="text" value={residencia.provincia} onChange={e => setResidencia({...residencia, provincia: e.target.value})} className="form-control" id="provinciaResidencia" />
                 </div>
-                <div className="col-lg-6 col-12">
+                <div className="col-lg-3 col-12">
                     <label htmlFor="codigoPostalResidenicia" className="form-label">Codigo Postal</label>
                     <input type="text" value={residencia.codigo_postal} onChange={e => setResidencia({...residencia, codigo_postal: e.target.value})} className="form-control" id="codigoPostalResidenicia" />
+                </div>
+                <div className="col-lg-3 col-12">
+                    <label htmlFor="codigo-prestador" className="form-label">Codigo del prestador</label>
+                    <input type="text" value={residencia.codigo_prestador} onChange={e => setResidencia({...residencia, codigo_prestador: e.target.value})} className="form-control" id="codigo-prestador" />
                 </div>
             </div>
             <div className="row mb-2">
