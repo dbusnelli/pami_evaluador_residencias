@@ -1,6 +1,6 @@
 import PencilSquareIcon from "../../../public/assets/pencil-square"
 import TrashIcon from "../../../public/assets/trash"
-import { formatDateFromSupabase } from "../../utils/utils"
+import { formatDateFromSupabase } from "../../utils/Utils"
 
 function Evaluacion(props) {
     const {evaluacion, handleEditar, handleEliminar} = props
