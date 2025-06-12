@@ -15,7 +15,6 @@ function Residencia(props) {
                 <div style={{display: "flex", justifyContent: "flex-end", gap: 2}}>
                     <button type="button" className="btn btn-primary" onClick={() => handleVerEvaluaciones(residencia)}><UploadDocumentIcon width={20} height={20} fill="white" /> Evaluaciones</button>
                     <button type="button" className="btn btn-primary" onClick={() => handleEditar(residencia)}><PencilSquareIcon width={20} height={20} fill="white" /> Editar</button>
-                    <button type="button" className="btn btn-danger" onClick={() => handleEliminar(residencia)}><TrashIcon width={20} height={20} fill="white" /> Eliminar</button>
                 </div>
             </div>
         </div>

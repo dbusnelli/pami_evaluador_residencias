@@ -89,6 +89,7 @@ function CrearResidencia({edicion}) {
 
     const clearAll = () => {
         setResidencia(initialResidencia)
+        setError(false)
         window.scrollTo({
             top: 0,
             left: 0,
@@ -152,15 +153,15 @@ function CrearResidencia({edicion}) {
                     <p>Modulo de cuidados continuos - MCC</p>
                     <div className="form-check form-check-inline">
                         <input className="form-check-input" type="radio" checked={residencia.mcc === 1} onChange={() => setResidencia({...residencia, mcc: 1})} />
-                    <label className="form-check-label" htmlFor="radioDefault1">
-                        Si
-                    </label>
+                        <label className="form-check-label" htmlFor="radioDefault1">
+                            Si
+                        </label>
                     </div>
                     <div className="form-check form-check-inline">
                         <input className="form-check-input" type="radio" checked={residencia.mcc === 0} onChange={() => setResidencia({...residencia, mcc: 0})} />
-                    <label className="form-check-label" htmlFor="radioDefault2">
-                        No
-                    </label>
+                        <label className="form-check-label" htmlFor="radioDefault2">
+                            No
+                        </label>
                     </div>
                 </div>
                 <div className="col-lg-3 col-12">
