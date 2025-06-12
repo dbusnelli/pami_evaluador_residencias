@@ -5,7 +5,7 @@ import { addEquipoEvaluador, addEvaluacion, addEvaluacionItems, deleteEquipoEval
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import CustomModal from "../commons/CustomModal";
 import { VER_EVALUACIONES_PAGE } from "../../router/Routes";
-import { normalizarFechaParaInputDate } from "../../utils/utils";
+import { normalizarFechaParaInputDate } from "../../utils/Utils";
 
 
 
